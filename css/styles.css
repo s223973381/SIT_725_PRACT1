@@ -1,0 +1,27 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00796b;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn {
+    background-color: #00796b;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #004d40;
+}
