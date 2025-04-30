@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+<h2 class="mb-4">Available Slots</h2>
+<form method="POST" action="/book">
+  <div class="mb-3">
+    <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+  </div>
+  <div class="mb-3">
+    <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+  </div>
+  <div class="mb-3">
+    <select name="slot_id" class="form-select" required>
+      <% slots.forEach(slot => { %>
+        <% if (!slot.is_booked) { %>
+          <option value="<%= slot.id %>"><%= slot.time_slot %></option>
+        <% } %>
+      <% }) %>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Book Slot</button>
+</form>
+
+<%- include('partials/footer') %>
